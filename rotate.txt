@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Orientation</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div id='rotateScreen'>
+      <img src="rotate.gif" alt="rotate screen">
+      <p>Please rotate your device!</p>
+    </div>
+    <div id='displayContent'>
+      <p>Insert your content here.</p>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+body{
+  margin:0;
+  padding:0;
+  background-color: black;
+  color:white;
+}
+
+#rotateScreen{
+  display: none;
+  text-align: center;
+  margin-top: 50vh;
+  transform: translateY(-50%);
+}
+
+#displayContent{
+  display: none;
+}
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  window.addEventListener("resize", detectOrientation) ;
+  detectOrientation() ;
+});
+
+function detectOrientation(){
+    //Votre code ici
+}
